@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerWeb", "DockerWeb\DockerWeb.csproj", "{C583D3BD-4DA3-4E99-BA9C-EA566B04F6EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerWeb", "DockerWeb\DockerWeb.csproj", "{66117CE6-AEBC-4EFC-A80B-F3192740CF05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C583D3BD-4DA3-4E99-BA9C-EA566B04F6EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C583D3BD-4DA3-4E99-BA9C-EA566B04F6EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C583D3BD-4DA3-4E99-BA9C-EA566B04F6EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C583D3BD-4DA3-4E99-BA9C-EA566B04F6EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66117CE6-AEBC-4EFC-A80B-F3192740CF05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66117CE6-AEBC-4EFC-A80B-F3192740CF05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66117CE6-AEBC-4EFC-A80B-F3192740CF05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66117CE6-AEBC-4EFC-A80B-F3192740CF05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9E0B022A-4800-4F47-B65E-8CD62D8D23B9}
+		SolutionGuid = {6038D1AF-3585-4DE0-81C5-64C776608E50}
 	EndGlobalSection
 EndGlobal
