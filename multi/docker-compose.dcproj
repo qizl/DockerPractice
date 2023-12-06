@@ -9,6 +9,7 @@
     <DockerServiceName>web</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="docker-compose-online.yml" />
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>
     </None>

@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  api1:
+    image: qizl/swarm-api1
+
+  api2:
+    image: qizl/swarm-api2
+
+  web:
+    image: qizl/swarm-web
+    depends_on:
+      - api1
+      - api2
+    ports:
+      - 80:80
+
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - 8000:8080
+    stop_grace_period: 1m30s
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
