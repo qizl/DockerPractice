@@ -2,22 +2,40 @@
 using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Utils;
 using Web.Models;
 
 namespace Web.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly AddressHelper _addressHelper;
+
+        public HomeController(AddressHelper addressHelper)
         {
+            _addressHelper = addressHelper;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            ViewBag.Address = this._addressHelper.GetLocalAddress();
+
+            var http = new HttpClient();
+            ViewBag.API1Address = await http.GetStringAsync("http://api1/api/test/ServerAddress");
+            ViewBag.API1Files = await http.GetStringAsync("http://api1/api/test/ServerFiles");
+            ViewBag.API2Address = await http.GetStringAsync("http://api2/api/test/ServerAddress");
+            ViewBag.API2Files = await http.GetStringAsync("http://api2/api/test/ServerFiles");
+
             return View();
         }
 
         public async Task<IActionResult> API()
         {
             var http = new HttpClient();
-            ViewBag.API1 = await http.GetStringAsync("http://api1/api/values");
-            ViewBag.API2 = await http.GetStringAsync("http://api2/api/values");
+            ViewBag.API1Address = await http.GetStringAsync("http://api1/api/test/ServerAddress");
+            ViewBag.API1Files = await http.GetStringAsync("http://api1/api/test/ServerFiles");
+            ViewBag.API2Address = await http.GetStringAsync("http://api2/api/test/ServerAddress");
+            ViewBag.API2Files = await http.GetStringAsync("http://api2/api/test/ServerFiles");
 
             return View();
         }

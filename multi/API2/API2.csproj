@@ -4,6 +4,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <DockerTargetOS>Linux</DockerTargetOS>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>dfec1e5d-bc64-440a-85ad-003f7cefa2ab</UserSecretsId>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +15,10 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.1916590" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Utils\Utils.csproj" />
   </ItemGroup>
 
 </Project>

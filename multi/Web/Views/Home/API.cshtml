@@ -1,8 +1,17 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "API";
 }
 
-<h2>API1 Result:@ViewBag.API1</h2>
-<h2>API2 Result:@ViewBag.API2</h2>
+<h2>API1:</h2>
+<b>Service Address:</b>
+<p>@Html.Raw(ViewBag.API1Address)</p>
+<b>Service Files:</b>
+<p>@Html.Raw(ViewBag.API1Files)</p>
+<hr />
+
+<h2>API2:</h2>
+<b>Service Address:</b>
+<p>@Html.Raw(ViewBag.API2Address)</p>
+<b>Service Files:</b>
+<p>@Html.Raw(ViewBag.API2Files)</p>
 
